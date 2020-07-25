@@ -1,11 +1,11 @@
-import { Heading, Box, theme } from '@chakra-ui/core'
+import Header from '../components/Header'
 
-const Home: React.FC = () => (
-  <Box as="main">
-    <Heading as="h1" fontSize={theme.fontSizes['6xl']}>
-      hey there! 👋
-    </Heading>
-  </Box>
-)
+function Home(): React.ReactElement {
+  return (
+    <>
+      <Header />
+    </>
+  )
+}
 
 export default Home

@@ -18,18 +18,9 @@ function MyApp({ Component, pageProps }: Props): React.ReactElement {
       <CSSReset />
       <Global
         styles={css`
-          body {
-            background-color: ${theme.colors.pink[500]};
-          }
           #__next {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             min-height: 100vh;
-            max-width: 600px;
-            margin: 0 auto;
-            color: ${theme.colors.gray[100]};
+            color: ${theme.colors.gray[700]};
           }
         `}
       />
