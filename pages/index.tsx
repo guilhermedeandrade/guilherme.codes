@@ -1,4 +1,4 @@
-import { About, Header, Skills } from '../components'
+import { About, Header, Skills, Projects } from '../components'
 
 function Home(): React.ReactElement {
   return (
@@ -6,6 +6,7 @@ function Home(): React.ReactElement {
       <Header />
       <About />
       <Skills />
+      <Projects />
     </>
   )
 }
