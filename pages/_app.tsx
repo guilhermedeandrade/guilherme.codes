@@ -20,6 +20,8 @@ function MyApp({ Component, pageProps }: Props): React.ReactElement {
         styles={css`
           #__next {
             min-height: 100vh;
+            max-width: 1200px;
+            margin: 0 auto;
             color: ${theme.colors.gray[700]};
           }
         `}
