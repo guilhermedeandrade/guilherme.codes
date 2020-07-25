@@ -1,10 +1,11 @@
-import { About, Header } from '../components'
+import { About, Header, Skills } from '../components'
 
 function Home(): React.ReactElement {
   return (
     <>
       <Header />
       <About />
+      <Skills />
     </>
   )
 }

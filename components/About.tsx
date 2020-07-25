@@ -4,17 +4,16 @@ function About(): React.ReactElement {
   return (
     <Flex
       as="section"
-      paddingX={theme.space[10]}
-      paddingTop={theme.space[5]}
+      paddingX={10}
+      paddingTop={5}
+      paddingBottom={20}
       alignItems="center"
       justifyContent="space-between"
+      maxW={1200}
+      mx="auto"
     >
       <Stack maxWidth={600} spacing={5}>
-        <Heading
-          as="h2"
-          fontSize={theme.fontSizes['6xl']}
-          color={theme.colors.purple[800]}
-        >
+        <Heading as="h2" fontSize="6xl" color="purple.800">
           I&apos;m Guilherme, software engineer and freelancer.
         </Heading>
 

@@ -18,10 +18,11 @@ function MyApp({ Component, pageProps }: Props): React.ReactElement {
       <CSSReset />
       <Global
         styles={css`
+          body {
+            background-color: ${theme.colors.gray[50]};
+          }
           #__next {
             min-height: 100vh;
-            max-width: 1200px;
-            margin: 0 auto;
             color: ${theme.colors.gray[700]};
           }
         `}

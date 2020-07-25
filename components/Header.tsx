@@ -13,7 +13,7 @@ const imageUrl =
 
 function Header(): React.ReactElement {
   return (
-    <Flex as="header" alignItems="center" padding={10}>
+    <Flex as="header" alignItems="center" padding={10} maxW={1200} mx="auto">
       <Stack isInline spacing={5} alignItems="center" flexGrow={1}>
         <Image src={imageUrl} rounded="full" size="60px" />
 
