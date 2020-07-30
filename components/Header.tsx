@@ -8,14 +8,11 @@ import {
   Heading,
 } from '@chakra-ui/core'
 
-const imageUrl =
-  'https://avatars0.githubusercontent.com/u/8797405?s=460&u=d4f57bff8140358062ba5cd006bf53ff3305f1a3&v=4'
-
 function Header(): React.ReactElement {
   return (
     <Flex as="header" alignItems="center" padding={10} maxW={1200} mx="auto">
       <Stack isInline spacing={5} alignItems="center" flexGrow={1}>
-        <Image src="/avatar.jpg" rounded="full" size="60px" />
+        <Image src="header/avatar.jpg" rounded="full" size="60px" />
 
         <Heading as="h1" size="lg" fontWeight="normal">
           guilherme de andrade

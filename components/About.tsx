@@ -25,7 +25,7 @@ function About(): React.ReactElement {
       </Stack>
 
       <Image
-        src="/about-section-illustration.svg"
+        src="about/to-the-moon.svg"
         alt="A rocket and an astrounaut on the moon's surface"
         size={400}
       />
