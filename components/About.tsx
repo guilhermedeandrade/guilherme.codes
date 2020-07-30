@@ -19,8 +19,15 @@ function About(): React.ReactElement {
         </Heading>
 
         <Text fontWeight="medium" fontSize="lg">
-          I can develop complete web applications, static sites and mobile apps.
-          From the backend to the frontend.{' '}
+          <Link
+            href="https://github.com/guilhermedeandrade"
+            isExternal
+            color="purple.600"
+          >
+            I can develop
+          </Link>{' '}
+          complete web applications, static sites and mobile apps. From the
+          backend to the frontend.{' '}
           <Link
             href="mailto:guilhermedeandrade@protonmail.com"
             isExternal
