@@ -1,4 +1,4 @@
-import { Flex, Heading, Stack, Text, Image } from '@chakra-ui/core'
+import { Flex, Heading, Stack, Text, Image, Link } from '@chakra-ui/core'
 
 function About(): React.ReactElement {
   return (
@@ -19,8 +19,15 @@ function About(): React.ReactElement {
         </Heading>
 
         <Text fontWeight="medium" fontSize="lg">
-          I can develop complete web applications and static sites. From the
-          backend to the frontend. Let&apos;s work together!
+          I can develop complete web applications, static sites and mobile apps.
+          From the backend to the frontend.{' '}
+          <Link
+            href="mailto:guilhermedeandrade@protonmail.com"
+            isExternal
+            color="purple.600"
+          >
+            Let&apos;s work together!
+          </Link>
         </Text>
       </Stack>
 

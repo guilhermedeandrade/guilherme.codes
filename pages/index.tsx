@@ -1,11 +1,11 @@
-import { About, Header, Skills, Projects, Contact } from '../components'
+import { About, Header, Services, Projects } from '../components'
 
 function Home(): React.ReactElement {
   return (
     <>
       <Header />
       <About />
-      <Skills />
+      <Services />
       <Projects />
     </>
   )

@@ -26,7 +26,7 @@ function Header(): React.ReactElement {
           </ListItem>
 
           <ListItem mr={8} transition="opacity 0.3s" _hover={{ opacity: 0.7 }}>
-            <a href="#skills">skills</a>
+            <a href="#services">services</a>
           </ListItem>
 
           <ListItem mr={8} transition="opacity 0.3s" _hover={{ opacity: 0.7 }}>
