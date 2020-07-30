@@ -4,6 +4,7 @@ function About(): React.ReactElement {
   return (
     <Flex
       as="section"
+      id="about"
       paddingX={10}
       paddingTop={5}
       paddingBottom={20}
@@ -19,7 +20,7 @@ function About(): React.ReactElement {
 
         <Text fontWeight="medium" fontSize="lg">
           I can develop complete web applications and static sites. From the
-          backend to the frontend.
+          backend to the frontend. Let&apos;s work together!
         </Text>
       </Stack>
 

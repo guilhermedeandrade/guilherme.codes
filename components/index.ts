@@ -1,6 +1,4 @@
-import About from './About'
-import Header from './Header'
-import Skills from './Skills'
-import Projects from './Projects'
-
-export { About, Header, Skills, Projects }
+export { default as About } from './About'
+export { default as Header } from './Header'
+export { default as Skills } from './Skills'
+export { default as Projects } from './Projects'

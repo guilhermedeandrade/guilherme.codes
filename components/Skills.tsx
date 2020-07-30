@@ -41,7 +41,7 @@ function Card({ title, description }: CardProps): React.ReactElement {
 
 function Skills(): React.ReactElement {
   return (
-    <Stack as="section" isInline bg="purple.600">
+    <Stack as="section" id="skills" isInline bg="purple.600">
       {cards.map(({ title, description }) => (
         <Card key={title} title={title} description={description} />
       ))}

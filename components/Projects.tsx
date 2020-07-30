@@ -37,7 +37,14 @@ function Project({
 
 function Projects(): React.ReactElement {
   return (
-    <Stack as="section" spacing={20} paddingTop={10} maxW={1200} mx="auto">
+    <Stack
+      as="section"
+      id="projects"
+      spacing={20}
+      paddingTop={10}
+      maxW={1200}
+      mx="auto"
+    >
       <Project
         isReversed={false}
         imagePath={placeholderImagePath}
