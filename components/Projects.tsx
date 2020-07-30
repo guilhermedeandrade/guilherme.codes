@@ -1,20 +1,17 @@
-import { Box, Heading, Text, Stack, Image } from '@chakra-ui/core'
+import { Box, Heading, Text, Stack, Image, Link } from '@chakra-ui/core'
 import { useMemo } from 'react'
 
 interface ProjectProps {
   imagePath: string
+  repoUrl: string
   title: string
   description: string
-  isReversed: boolean
+  isReversed?: boolean
 }
-
-const placeholderImagePath = 'https://picsum.photos/600/300'
-
-const placeholderDescription =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur'
 
 function Project({
   imagePath,
+  repoUrl,
   title,
   description,
   isReversed,
@@ -28,7 +25,11 @@ function Project({
       <Image src={imagePath} width={600} rounded="md" />
 
       <Box alignSelf="center" width={600} {...marginX}>
-        <Heading fontSize="xl">{title}</Heading>
+        <Heading fontSize="xl" color="purple.600">
+          <Link href={repoUrl} isExternal>
+            {title}
+          </Link>
+        </Heading>
         <Text mt={4}>{description}</Text>
       </Box>
     </Stack>
@@ -46,22 +47,25 @@ function Projects(): React.ReactElement {
       mx="auto"
     >
       <Project
-        isReversed={false}
-        imagePath={placeholderImagePath}
-        title="Project Number One"
-        description={placeholderDescription}
+        imagePath="projects/be-the-hero.jpg"
+        repoUrl="https://github.com/guilhermedeandrade/be-the-hero"
+        title="Be The Hero"
+        description="A full-stack application, including a mobile app, that connects helpful people with nonprofit organizations that are needing help with specific issues and accidents. Technologies used: Typescript, Node.js, Express, React, React Native and Jest."
       />
+
       <Project
         isReversed
-        imagePath={placeholderImagePath}
-        title="Project Number Two"
-        description={placeholderDescription}
+        repoUrl="https://github.com/guilhermedeandrade/gostack-gobarber"
+        imagePath="projects/gobarber.jpg"
+        title="GoBarber"
+        description="The purpose of GoBarber is to connect barbers with their clients. The clients can schedule appointments using the web app and the provider can check their next sessions on the mobile app. Technologies used:  Typescript, Node.js, Express, React, React Native, TypeORM, styled-components and Jest."
       />
+
       <Project
-        isReversed={false}
-        imagePath={placeholderImagePath}
-        title="Project Number Three"
-        description={placeholderDescription}
+        imagePath="projects/gorestaurant.jpg"
+        repoUrl="https://github.com/guilhermedeandrade/gostack-gorestaurant-mobile"
+        title="GoRestaurant"
+        description="GoRestaurant is a mobile application that emulates the flow of a food delivery application. You have different types of food available and you are able to select the ones you wish and, finally, order them! Technologies used: TypeScript and React Native."
       />
     </Stack>
   )
