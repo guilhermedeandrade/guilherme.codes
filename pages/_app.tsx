@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: Props): React.ReactElement {
   return (
     <ThemeProvider>
       <Head>
-        <title>guilherme.codes</title>
+        <title>guilherme de andrade | software engineer</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Component {...pageProps} />
@@ -19,17 +19,11 @@ function MyApp({ Component, pageProps }: Props): React.ReactElement {
       <Global
         styles={css`
           body {
-            background-color: ${theme.colors.pink[500]};
+            background-color: ${theme.colors.gray[50]};
           }
           #__next {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             min-height: 100vh;
-            max-width: 600px;
-            margin: 0 auto;
-            color: ${theme.colors.gray[100]};
+            color: ${theme.colors.gray[700]};
           }
         `}
       />
