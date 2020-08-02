@@ -6,6 +6,7 @@ import {
   ListItem,
   Stack,
   Heading,
+  Link,
 } from '@chakra-ui/core'
 
 function Header(): React.ReactElement {
@@ -19,30 +20,30 @@ function Header(): React.ReactElement {
         </Heading>
       </Stack>
 
-      <Box as="nav">
+      <Box as="nav" display={['none', 'none', 'none', 'block']}>
         <List d="flex" fontSize="xl" alignItems="center">
           <ListItem mr={8} transition="opacity 0.3s" _hover={{ opacity: 0.7 }}>
-            <a href="#about">about</a>
+            <Link href="#about">about</Link>
           </ListItem>
 
           <ListItem mr={8} transition="opacity 0.3s" _hover={{ opacity: 0.7 }}>
-            <a href="#services">services</a>
+            <Link href="#services">services</Link>
           </ListItem>
 
           <ListItem mr={8} transition="opacity 0.3s" _hover={{ opacity: 0.7 }}>
-            <a href="#projects">projects</a>
+            <Link href="#projects">projects</Link>
           </ListItem>
 
           <ListItem
             border="2px solid"
             borderColor="purple.600"
             rounded="md"
-            px={2}
             color="purple.600"
             transition="opacity 0.3s"
             _hover={{ opacity: 0.7 }}
+            px={2}
           >
-            <a href="mailto:guilhermedeandrade@protonmail.com">contact</a>
+            <Link href="mailto:guilhermedeandrade@protonmail.com">contact</Link>
           </ListItem>
         </List>
       </Box>
