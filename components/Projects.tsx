@@ -1,12 +1,10 @@
-import { Box, Heading, Text, Stack, Image, Link } from '@chakra-ui/core'
-import { useMemo } from 'react'
+import { Box, Heading, Text, Flex, Image, Link, Stack } from '@chakra-ui/core'
 
 interface ProjectProps {
   imagePath: string
   repoUrl: string
   title: string
   description: string
-  isReversed?: boolean
 }
 
 function Project({
@@ -14,17 +12,17 @@ function Project({
   repoUrl,
   title,
   description,
-  isReversed,
 }: ProjectProps): React.ReactElement {
-  const marginX = useMemo(() => (isReversed ? { mr: 50 } : { ml: 50 }), [
-    isReversed,
-  ])
-
   return (
-    <Stack isInline p={10} isReversed={isReversed}>
-      <Image src={imagePath} width={600} rounded="md" />
+    <Flex direction={['column', 'column', 'row', 'row']} p={10}>
+      <Image src={imagePath} width={['100%', 300, 300, 600]} rounded="md" />
 
-      <Box alignSelf="center" width={600} {...marginX}>
+      <Box
+        alignSelf="center"
+        width={['100%', 300, 300, 600]}
+        mx={50}
+        my={{ base: 8 }}
+      >
         <Heading fontSize="xl" color="purple.600">
           <Link href={repoUrl} isExternal>
             {title}
@@ -32,7 +30,7 @@ function Project({
         </Heading>
         <Text mt={4}>{description}</Text>
       </Box>
-    </Stack>
+    </Flex>
   )
 }
 
@@ -41,6 +39,7 @@ function Projects(): React.ReactElement {
     <Stack
       as="section"
       id="projects"
+      alignItems="center"
       spacing={20}
       paddingTop={10}
       maxW={1200}
@@ -54,7 +53,6 @@ function Projects(): React.ReactElement {
       />
 
       <Project
-        isReversed
         repoUrl="https://github.com/guilhermedeandrade/gostack-gobarber"
         imagePath="projects/gobarber.jpg"
         title="GoBarber"

@@ -14,7 +14,11 @@ function About(): React.ReactElement {
       mx="auto"
     >
       <Stack maxWidth={600} spacing={5}>
-        <Heading as="h2" fontSize="6xl" color="purple.800">
+        <Heading
+          as="h2"
+          fontSize={['4xl', '5xl', '5xl', '6xl']}
+          color="purple.800"
+        >
           I&apos;m Guilherme, software engineer and freelancer.
         </Heading>
 
@@ -39,6 +43,7 @@ function About(): React.ReactElement {
       </Stack>
 
       <Image
+        display={['none', 'none', 'none', 'block']}
         src="about/to-the-moon.svg"
         alt="A rocket and an astrounaut on the moon's surface"
         size={400}

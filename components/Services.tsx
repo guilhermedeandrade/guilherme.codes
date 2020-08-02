@@ -1,4 +1,4 @@
-import { Flex, Heading, Stack, Text } from '@chakra-ui/core'
+import { Flex, Heading, Text } from '@chakra-ui/core'
 import { FiMonitor, FiServer, FiSmartphone } from 'react-icons/fi'
 
 interface CardProps {
@@ -33,7 +33,7 @@ function Card({ icon, title, description }: CardProps): React.ReactElement {
     <Flex
       direction="column"
       alignItems="center"
-      m={10}
+      m={[5, 5, 5, 10]}
       p={5}
       shadow="md"
       borderWidth="1px"
@@ -55,11 +55,16 @@ function Card({ icon, title, description }: CardProps): React.ReactElement {
 
 function Services(): React.ReactElement {
   return (
-    <Stack as="section" id="services" isInline bg="purple.600">
+    <Flex
+      as="section"
+      id="services"
+      direction={['column', 'row', 'row', 'row']}
+      bg="purple.600"
+    >
       {cards.map(({ icon, title, description }) => (
         <Card key={title} icon={icon} title={title} description={description} />
       ))}
-    </Stack>
+    </Flex>
   )
 }
 
