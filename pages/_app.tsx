@@ -18,9 +18,20 @@ function MyApp({ Component, pageProps }: Props): React.ReactElement {
       <CSSReset />
       <Global
         styles={css`
+          html {
+            scroll-behavior: smooth;
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            html {
+              scroll-behavior: auto;
+            }
+          }
+
           body {
             background-color: ${theme.colors.gray[50]};
           }
+
           #__next {
             min-height: 100vh;
             color: ${theme.colors.gray[700]};
